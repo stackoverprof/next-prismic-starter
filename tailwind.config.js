@@ -5,9 +5,9 @@ module.exports = {
 	theme: {
 		extend: {
 			colors: {
-				base: '#FFFFFF',
-				primary: '#61cdff',
-				secondary: '#f4ff60',
+				base: '#dfe1fd',
+				primary: '#3b3b3b',
+				secondary: '#6092ff',
 			},
 			fontFamily: {
 				main: 'ProximaNova, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif',

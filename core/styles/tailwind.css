@@ -4,12 +4,9 @@
 
 @layer components {
 	.btn-main {
-		@apply cursor-pointer px-6 py-3 text-white bg-primary hover:bg-opacity-80;
+		@apply cursor-pointer px-6 py-3 text-black font-semibold bg-primary rounded hover:text-secondary;
 	}
-	.btn-bordered {
-		@apply cursor-pointer px-6 py-3 text-primary border border-primary bg-primary bg-opacity-0 hover:bg-opacity-10;
-	}
-
+	
 	hr.vertical {
 		@apply w-0.5 h-6 bg-gray-200 mx-4;
 	}
@@ -17,6 +14,7 @@
 	button[value='loading'] {
 		@apply flex-cc;
 	}
+
 	button[value='loading'] i.spinner {
 		@apply inline-flex ml-4;
 	}
@@ -39,6 +37,7 @@
 			transform: rotate(360deg);
 		}
 	}
+
 }
 
 @layer utilities {
@@ -114,7 +113,8 @@
 
 	html,
 	body {
-		@apply font-main m-0 p-0 bg-base text-black;
+		@apply font-main m-0 p-0 bg-base text-primary;
+		scroll-behavior: smooth;
 	}
 
 	a {
@@ -145,5 +145,10 @@
 		-moz-appearance: none;
 		text-indent: 1px;
 		text-overflow: '';
+	}
+
+	pre {
+		color: #FB5B5B;
+		font-weight: bold;
 	}
 }

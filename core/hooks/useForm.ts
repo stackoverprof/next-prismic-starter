@@ -1,13 +1,20 @@
 import { useState } from 'react';
 
-const useForm = (format: unknown): any[] => {
-	const [form, setForm] = useState(format);
+type ProductTuple<T> = [
+	T,
+	(arg0: React.SyntheticEvent) => void,
+	() => void
+]
 
-	const mutateForm = ({ target: { name, value } }) => {
-		setForm((prev) => ({ ...prev, [name]: value }));
+const useForm = <T>(format: T): ProductTuple<T> => {
+	const [form, setForm] = useState<T>(format);
+
+	const mutateForm = ({ target }: React.SyntheticEvent): void => {
+		const { name, value, type, checked } = target as HTMLInputElement;
+		setForm((prev) => ({ ...prev, [name]: type === 'checkbox' ? checked : value }));
 	};
 
-	const resetForm = () => {
+	const resetForm = (): void => {
 		setForm(format);
 	};
 

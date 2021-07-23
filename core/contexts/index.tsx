@@ -3,27 +3,24 @@ import LayoutStore, { LayoutStoreType } from './LayoutStore';
 
 const AppContext = React.createContext(null);
 
-interface ExportType {
-	layout: LayoutStoreType
-}
-
 interface Props {
 	children: React.ReactNode
 }
 
 const AppProvider = ({children}: Props): JSX.Element => {
 
-	const Exporter: ExportType = {
+	const Store = {
 		layout: LayoutStore()
 	};
 
 	return (
-		<AppContext.Provider value={Exporter}>
+		<AppContext.Provider value={Store}>
 			{ children }
 		</AppContext.Provider>
 	);
 };
 
 export default AppProvider;
-export const useApp = (): ExportType => useContext(AppContext);
-export const useLayout = (): LayoutStoreType => useContext(AppContext).layout;
+
+const useStore = () => useContext(AppContext);
+export const useLayout = (): LayoutStoreType => useStore().layout;

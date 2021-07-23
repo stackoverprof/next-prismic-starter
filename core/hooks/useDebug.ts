@@ -1,9 +1,9 @@
 import { useEffect } from 'react';
 
-const useDebug = (variable: unknown): void => {
+const useDebug = (state: unknown): void => {
 	useEffect(() => {
-		console.log(variable);
-	}, [variable]);
+		console.log(state);
+	}, [state]);
 };
 
 export default useDebug;
