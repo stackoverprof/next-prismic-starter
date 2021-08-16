@@ -1,6 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
-import { AppProps } from 'next/dist/next-server/lib/router/router';
+import { AppProps } from 'next/dist/shared/lib/router/router';
 import ProgressBar from 'nextjs-progressbar';
 import ContextProvider from '@core/contexts';
 import SEOTags from '@components/_shared/SEOTags';
