@@ -13,7 +13,7 @@ interface Props {
 	className?: string
 }
 
-const DynamicLayout = ({children, content, title, className = ''}: Props): JSX.Element => {
+const DynamicLayout = ({children, content, title, className}: Props): JSX.Element => {
 	const { mainAlert, resetMainAlert } = useLayout();
 	const [clearance, upperRef, lowerRef] = useClearance();
 
@@ -31,11 +31,11 @@ const DynamicLayout = ({children, content, title, className = ''}: Props): JSX.E
 				))}
 			</header>
 
-			<main style={{minHeight: clearance}} className={`${className} overflow-x-hidden`}>
+			<main style={{minHeight: clearance}} className={className}>
 				{children}
 			</main>
 
-			<footer ref={lowerRef} className="overflow-x-hidden">
+			<footer ref={lowerRef}>
 				{content.body.slice(childrenPosition + 1).map((slice, i) => (
 					<RenderSlice slice={slice} key={i}/>
 				))}
