@@ -3,16 +3,15 @@
 @tailwind utilities;
 
 @layer components {
-	.btn-main {
-		@apply cursor-pointer px-6 py-3 text-black font-semibold bg-primary rounded hover:text-secondary;
-	}
 
-	button[value='loading'] {
+
+	/* Built in loading state of every button */
+	button[data-loading=true] {
 		@apply flex-cc;
 	}
 
-	button[value='loading'] i.spinner {
-		@apply inline-flex ml-4;
+	button[data-loading=true] i.spinner {
+		@apply inline-flex ml-2;
 	}
 
 	i.spinner {
@@ -20,7 +19,7 @@
 		width: 16px;
 		height: 16px;
 		border: 3px solid;
-		border-color: #000 #0005 #000 #0005;
+		border-color: #fff #fff5 #fff #fff5;
 		border-radius: 50%;
 		animation: spin 1.2s linear infinite;
 	}
@@ -57,11 +56,16 @@
 	.flex-vs { @apply flex justify-evenly items-start; }
 	.flex-ve { @apply flex justify-evenly items-end; }
 
+	.flex-ac { @apply flex justify-around items-center; }
+	.flex-as { @apply flex justify-around items-start; }
+	.flex-ae { @apply flex justify-around items-end; }
+
 	.col { @apply flex-col; }
 
 	.full { @apply w-full h-full; }
 	.fullscreen { @apply fixed full inset-0; }
 	.stroked { -webkit-text-stroke: 0.4px; }
+
 }
 
 @layer base {
@@ -69,44 +73,16 @@
 		@apply box-border;
 	}
 
-	html,
-	body {
+	html, body {
 		@apply font-main m-0 p-0 bg-base text-primary;
 		scroll-behavior: smooth;
 	}
 
 	a {
-		color: inherit;
 		@apply no-underline;
 	}
 
-	button {
-		@apply flex-cc cursor-pointer focus:outline-none;
-	}
-
-	input {
-		@apply focus:outline-none bg-white;
-	}
-
-	textarea {
+	button, input, textarea, select {
 		@apply focus:outline-none;
-	}
-
-	select {
-		@apply focus:outline-none;
-
-		background: url('/img/icons/dropdownarrow.svg');
-		background-position: right;
-		background-size: contain;
-		background-repeat: no-repeat;
-		-webkit-appearance: none;
-		-moz-appearance: none;
-		text-indent: 1px;
-		text-overflow: '';
-	}
-
-	pre {
-		color: #FB5B5B;
-		font-weight: bold;
 	}
 }
