@@ -12,6 +12,7 @@
 - RenderSlice: development is done per slice basis
 - Custom Page: create a page directly and only from prismic
 - Dynamic Layouting: create layout in prismic and apply it to custom page
+- Server-Side Generation: Blazing fast production as static files
 
 **Extras:** Layout, Alert, Custom Link, Custom Image, SEOTags, useForm, Context setup
 
