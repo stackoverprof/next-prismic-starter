@@ -1,4 +1,5 @@
 import HeroLanding from './HeroLanding';
+import FooterMain from './FooterMain';
 
 // Your slice_type (snake_case) must be the same with the Component's name (PascalCase)
 // example: 'hero_landing' will render <HeroLanding />
@@ -7,4 +8,5 @@ import HeroLanding from './HeroLanding';
 
 export default {
 	HeroLanding,
+	FooterMain
 };

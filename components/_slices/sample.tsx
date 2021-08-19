@@ -11,7 +11,7 @@ const SliceName = ({slice}: Props): JSX.Element => {
 	
 	return (
 		<section className="flex-cc w-full">
-			<div className="container  max-w-7xl flex-cc col px-28 -md:px-8">
+			<div className="container flex-sc col">
 				
 			</div>
 		</section>
