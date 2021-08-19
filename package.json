@@ -1,5 +1,5 @@
 {
-	"name": "next-prismic-boilerplate",
+	"name": "stackoverprof-starter",
 	"version": "0.1.0",
 	"private": true,
 	"scripts": {
@@ -21,7 +21,7 @@
 	},
 	"devDependencies": {
 		"@next/eslint-plugin-next": "^11.1.0",
-		"@types/node": "^15.14.4",
+		"@types/node": "^15.14.8",
 		"@types/react": "^17.0.15",
 		"@typescript-eslint/eslint-plugin": "^4.28.5",
 		"@typescript-eslint/parser": "^4.28.5",
