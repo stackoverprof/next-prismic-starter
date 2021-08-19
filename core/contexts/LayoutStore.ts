@@ -2,21 +2,21 @@ import { useState } from 'react';
 import { EnumType } from '@components/_shared/AlertHandler';
 
 const LayoutStore = (): LayoutStoreType => {
-	const [mainAlert, setMainAlert] = useState<AlertType | null>(null);
+	const [alert_value, Alert] = useState<AlertType | null>(null);
 
-	const resetMainAlert = () => setMainAlert(null);
+	const resetAlert = () => Alert(null);
 
 	return {
-		mainAlert,
-		setMainAlert,
-		resetMainAlert,
+		alert_value,
+		Alert,
+		resetAlert,
 	};
 };
 
 export interface LayoutStoreType {
-	mainAlert: AlertType | null
-	setMainAlert(arg0: AlertType | null): void
-	resetMainAlert(): void
+	alert_value: AlertType | null
+	Alert(arg0: AlertType | null): void
+	resetAlert(): void
 }
 
 export interface AlertType {
