@@ -1,0 +1,29 @@
+{
+  "Main": {
+    "uid": {
+      "type": "UID",
+      "config": {
+        "label": "uid",
+        "placeholder": "unique layout name"
+      }
+    },
+    "body": {
+      "type": "Slices",
+      "fieldset": "Slice zone",
+      "config": {
+        "labels": {},
+        "choices": {
+          "children": {
+            "type": "Slice",
+            "fieldset": "CHILDREN",
+            "description": "⚠️ PRISMIC CHILDREN POSITION ⚠️",
+            "icon": "texture",
+            "display": "list",
+            "non-repeat": {},
+            "repeat": {}
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "Main" : {
+    "uid" : {
+      "type" : "UID",
+      "config" : {
+        "label" : "UID",
+        "placeholder" : "unique document identifier"
+      }
+    },
+    "html_title" : {
+      "type" : "Text",
+      "config" : {
+        "label" : "HTML Title",
+        "placeholder" : "If empty will show : Hybrid — Digital Agency"
+      }
+    },
+    "route" : {
+      "type" : "Text",
+      "config" : {
+        "label" : "Route",
+        "placeholder" : "Path of this page   *The safe characters are a-z, A-Z, 0-9 - (no special letters)"
+      }
+    },
+    "layout" : {
+      "type" : "Link",
+      "config" : {
+        "select" : "document",
+        "customtypes" : [ "layouts" ],
+        "label" : "Apply Layout",
+        "placeholder" : "Choose layout which determine navbar and footer style"
+      }
+    },
+    "body" : {
+      "type" : "Slices",
+      "fieldset" : "Slice zone",
+      "config" : {
+        "labels" : { }
+      }
+    }
+  }
+}
