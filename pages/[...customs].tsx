@@ -6,9 +6,11 @@ import client from '@core/prismic/client';
 import Prismic from '@prismicio/client';
 import DynamicLayout from '@components/_layouts/DynamicLayout';
 import RenderSlice from '@components/_slices/_renderslice';
+import useDebug from '@core/hooks/useDebug';
 
 const CustomPage = ({ content, layout_content }: StaticProps): JSX.Element => {
 	const router = useRouter();
+	useDebug(layout_content);
 	
 	return (
 		<DynamicLayout content={layout_content} title={content.html_title} key={router.asPath}>

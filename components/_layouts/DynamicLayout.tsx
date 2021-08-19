@@ -10,11 +10,9 @@ interface Props {
 	children: React.ReactNode
 	content: LayoutContentType
 	title?: string
-	className?: string
-	style?: React.CSSProperties
 }
 
-const DynamicLayout = ({children, content, title, className, style}: Props): JSX.Element => {
+const DynamicLayout = ({children, content, title}: Props): JSX.Element => {
 	const { alert_value, resetAlert } = useLayout();
 	const [clearance, upperRef, lowerRef] = useClearance();
 
@@ -30,7 +28,7 @@ const DynamicLayout = ({children, content, title, className, style}: Props): JSX
 				))}
 			</header>
 
-			<main style={{minHeight: clearance, ...style}} className={className}>
+			<main style={{minHeight: clearance}} className="flex-sc col">
 				{children}
 			</main>
 
