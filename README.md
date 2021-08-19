@@ -1,10 +1,10 @@
-# Next Prismic (Slice-concept) Starter
+# Next Prismic (Slice-Concept) Starter
 ### The approach to make a fully customizable web-app from a CMS
 
 **Technologies:**
 
 [![](https://img.shields.io/badge/NEXT%20-%23000000.svg?&style=flat&logo=next.js&logoColor=white)](https://nextjs.org)
-[![](https://img.shields.io/badge/PRISMIC%20-%235163BA.svg?&style=flat&logo=prismic&logoColor=white)](https://prismic.io)  
+[![](https://img.shields.io/badge/PRISMIC%20-%235163BA.svg?&style=flat&logo=prismic&logoColor=white)](https://prismic.io)
 [![](https://img.shields.io/badge/TAILWIND%20-%2338B2AC.svg?&style=flat&logo=tailwindcss&logoColor=white)](https://tailwindcss.com) 
 
 **Main Features:**
