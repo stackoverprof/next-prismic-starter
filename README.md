@@ -1,13 +1,23 @@
-# Prismic Next Integration with Slices and Custom Pages
-## The approach to make a fully customizable web-app from a CMS
+# Next Prismic (Slice-concept) Starter
+### The approach to make a fully customizable web-app from a CMS
+
+**Technologies:**
+
+[![](https://img.shields.io/badge/NEXT%20-%23000000.svg?&style=flat&logo=next.js&logoColor=white)](https://nextjs.org)
+[![](https://img.shields.io/badge/PRISMIC%20-%235163BA.svg?&style=flat&logo=prismic&logoColor=white)](https://prismic.io)  
+[![](https://img.shields.io/badge/TAILWIND%20-%2338B2AC.svg?&style=flat&logo=tailwindcss&logoColor=white)](https://tailwindcss.com) 
+
+**Main Features:**
 
 - RenderSlice: development is done per slice basis
 - Custom Page: create a page directly and only from prismic
 - Dynamic Layouting: create layout in prismic and apply it to custom page
 
+**Extras:** Layout, Alert, Custom Link, Custom Image, SEOTags, useForm, Context setup
+
 ## Preview
 
-Preview the example live on [Here](https://next-prismic.errbint.net)
+Preview the example live on [Here](https://next-prismic-starter.errbint.net)
 
 ## Deploy your own
 
@@ -18,6 +28,12 @@ Deploy the example by clicking below
 ## How to use
 
 Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init) or [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/)
+
+Or simply short:
+Just do 
+```npm install```
+and then 
+```npm run dev```
 
 ## Contribute
 
