@@ -85,4 +85,8 @@
 	button, input, textarea, select {
 		@apply focus:outline-none;
 	}
+
+	pre {
+		@apply text-red-500 font-bold;
+	}
 }
