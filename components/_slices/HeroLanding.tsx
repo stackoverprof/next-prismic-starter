@@ -1,7 +1,8 @@
 import Link from '@components/_shared/Link';
+import { useLayout } from '@core/contexts';
 import { SliceType } from '@core/prismic/client';
 import { RichText } from 'prismic-reactjs';
-import React from 'react';
+import React, { useEffect } from 'react';
 import useDebug from './../../core/hooks/useDebug';
 
 interface Props {
@@ -10,7 +11,13 @@ interface Props {
 
 const HeroLanding = ({slice}: Props): JSX.Element => {
 	useDebug(slice);
-	
+
+	const { Alert } = useLayout();
+
+	useEffect(() => {
+		Alert({message: 'Hello World'});
+	}, []);
+
 	return (
 		<section className="flex-cc w-full">
 			<div className="container flex-sc col">
