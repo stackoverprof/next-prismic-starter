@@ -1,6 +1,6 @@
 import Prismic from '@prismicio/client';
 
-const apiEndpoint = 'https://hybrid-new.prismic.io/api/v2';
+const apiEndpoint = process.env.PRISMIC_API;
 const accessToken = process.env.NEXT_PUBLIC_PRISMIC_TOKEN || '';
 
 const client = Prismic.client(apiEndpoint, { accessToken });
