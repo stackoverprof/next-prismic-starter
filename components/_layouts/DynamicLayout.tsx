@@ -1,29 +1,28 @@
 import React from 'react';
-import Head from 'next/head';
-import AlertHandler from '@components/_shared/AlertHandler';
-import { useLayout } from '@core/contexts/index';
-import RenderSlice from '@components/_slices/_renderslice';
 import useClearance from '@core/hooks/useClearance';
+import { useLayout } from '@core/contexts';
+import AlertHandler from '@components/_shared/AlertHandler';
+import SEOTags from '@components/_shared/SEOTags';
 import { LayoutContentType } from '@core/prismic/client';
+import RenderSlice from '@components/_slices/_renderslice';
 
 interface Props {
 	children: React.ReactNode
 	content: LayoutContentType
 	title?: string
 	className?: string
+	style?: React.CSSProperties
 }
 
-const DynamicLayout = ({children, content, title, className}: Props): JSX.Element => {
-	const { mainAlert, resetMainAlert } = useLayout();
+const DynamicLayout = ({children, content, title, className, style}: Props): JSX.Element => {
+	const { alert_value, resetAlert } = useLayout();
 	const [clearance, upperRef, lowerRef] = useClearance();
 
 	const childrenPosition = content.body.findIndex(slice => slice.slice_type === 'children');
 
 	return (
 		<>
-			<Head>
-				{title && <title>{title} — Hybrid</title>}
-			</Head>
+			<SEOTags title={title} />
 
 			<header ref={upperRef}>
 				{content.body.slice(0, childrenPosition).map((slice, i) => (
@@ -31,7 +30,7 @@ const DynamicLayout = ({children, content, title, className}: Props): JSX.Elemen
 				))}
 			</header>
 
-			<main style={{minHeight: clearance}} className={className}>
+			<main style={{minHeight: clearance, ...style}} className={className}>
 				{children}
 			</main>
 
@@ -41,7 +40,7 @@ const DynamicLayout = ({children, content, title, className}: Props): JSX.Elemen
 				))}
 			</footer>
 
-			{mainAlert && <AlertHandler type={mainAlert.type} message={mainAlert.message} handleClose={resetMainAlert} key={Math.random()}/>}
+			{alert_value && <AlertHandler type={alert_value.type} message={alert_value.message} handleClose={resetAlert} key={Math.random()}/>}
 		</>
 	);
 };
