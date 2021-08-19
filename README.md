@@ -41,7 +41,7 @@ Deploy the example by clicking below
 5. Finally you can now create document with ```pages``` and apply the layout made before
 6. You can continue further development by doing it per slice basis:
 	- Make a slice in prismic (e.g. Hero Landing ```hero-landing```)
-	- Make the corresponding Slice document inside components/_slices  (e.g. HeroLanding.tsx)
+	- Make the corresponding component inside components/_slices  (e.g. HeroLanding.tsx)
 	- Register the new HeroLanding.tsx in _slicelist.ts (import-export manager)
 	- All Good! Code rightaway in HeroLanding.tsx (for example)
 
