@@ -18,6 +18,16 @@ const HeroLanding = ({slice}: Props): JSX.Element => {
 		Alert({message: 'Hello World'});
 	}, []);
 
+	const switch_button_type = {
+		base: '#ffffff',
+		primary: '#3b3b3b',
+		accent: '#FF5B14',
+		info: '#2DA7FB',
+		warning: '#FFCB11',
+		danger: '#ec4141',
+		success: '#67db8e',
+	};
+
 	return (
 		<section className="flex-cc w-full">
 			<div className="container flex-sc col">
@@ -33,7 +43,7 @@ const HeroLanding = ({slice}: Props): JSX.Element => {
 				
 				<div className="flex-cc gap-4">
 					{slice.items.map((item, i) => (
-						<Link href={item.link_path} className={['px-4 py-2 text-white hover:bg-opacity-80', `bg-${item.color}`].join(' ')} key={i}>
+						<Link href={item.link_path} className={['px-4 py-2 text-white hover:bg-opacity-80', switch_button_type[item.color]].join(' ')} key={i}>
 							{RichText.asText(item.link_text)}
 						</Link>
 					))}
