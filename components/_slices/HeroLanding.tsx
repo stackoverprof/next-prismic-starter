@@ -19,13 +19,13 @@ const HeroLanding = ({slice}: Props): JSX.Element => {
 	}, []);
 
 	const switch_button_type = {
-		base: '#ffffff',
-		primary: '#3b3b3b',
-		accent: '#FF5B14',
-		info: '#2DA7FB',
-		warning: '#FFCB11',
-		danger: '#ec4141',
-		success: '#67db8e',
+		base: 'bg-base',
+		primary: 'bg-primary',
+		accent: 'bg-accent',
+		info: 'bg-info',
+		warning: 'bg-warning',
+		danger: 'bg-danger',
+		success: 'bg-success',
 	};
 
 	return (
